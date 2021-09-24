@@ -24,7 +24,7 @@ const StyledForm = styled.div`
   input {
     ${{ ...Fonts.h3 }}
     outline: none;
-    padding: 10px;
+    padding: 10px 20px;
     height: 60px;
     max-width: 380px;
     width: 100%;
@@ -54,6 +54,9 @@ const StyledButton = styled.button`
   background: #f2c94c;
   border-radius: 6px;
   border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: ${COLORS.white};
 `;
 
 const LoginSchema = Yup.object().shape({
@@ -93,7 +96,11 @@ const LoginForm = () => {
           <Form>
             {formError && <div>{formError}</div>}
             <div className="formField">
-              <Field name="username" placeholder="username" />
+              <Field
+                name="username"
+                placeholder="username"
+                autocomplete="off"
+              />
               {errors.username && touched.username ? (
                 <div className="error">{errors.username}</div>
               ) : null}
@@ -103,13 +110,14 @@ const LoginForm = () => {
                 name="password"
                 placeholder="password"
                 className="formField"
+                type="password"
               />
               {errors.password && touched.password ? (
                 <div className="error">{errors.password}</div>
               ) : null}
             </div>
             <div>
-              <StyledButton type="submit">Submit</StyledButton>
+              <StyledButton type="submit">LOGIN</StyledButton>
             </div>
           </Form>
         </StyledForm>

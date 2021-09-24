@@ -5,7 +5,7 @@ import { GET_POKEMONS } from './query';
 import Spinner from '../Spinner';
 import PokemonItem from './PokemonItem';
 import Pagination from '../Pagination';
-import { COLORS } from '../../const/styles';
+import { COLORS, Fonts } from '../../const/styles';
 
 const StyledPokemonList = styled.div`
   background-color: ${COLORS.darkBlue};
@@ -33,6 +33,7 @@ const SyledPagination = styled.div`
     }
   }
   .page-link {
+    ${{ ...Fonts.h3 }}
     background: ${COLORS.darkBlue};
     color: ${COLORS.white20};
     border-radius: 5px;
@@ -41,6 +42,7 @@ const SyledPagination = styled.div`
     margin-right: 2px;
     box-sizing: border-box;
     font-size: 14px;
+    font-weight: bold;
   }
 `;
 
