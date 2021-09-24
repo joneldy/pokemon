@@ -10,6 +10,7 @@ export const COLORS = {
   black20: '#1F1F1F',
   blue20: '#3b3e46',
   blue30: '#484d57',
+  red: 'red',
 };
 
 export const Fonts = {

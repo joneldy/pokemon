@@ -2,6 +2,7 @@ import React from 'react';
 import { PokemonListContext } from '../../../context/PokemonListContext';
 import styled from 'styled-components';
 import { COLORS, Fonts } from '../../../const/styles';
+
 const StyledList = styled.li`
   margin-bottom: 15px;
   background-color: ${COLORS.grey};
